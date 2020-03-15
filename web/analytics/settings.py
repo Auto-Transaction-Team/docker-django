@@ -51,7 +51,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'analytics.urls'
 
-ALLOWED_HOSTS = ['198.211.99.20', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['3.112.254.224', 'localhost', '127.0.0.1']
 
 TEMPLATES = [
     {
