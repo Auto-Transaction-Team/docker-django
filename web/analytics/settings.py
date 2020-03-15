@@ -51,6 +51,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'analytics.urls'
 
+ALLOWED_HOSTS = ['198.211.99.20', 'localhost', '127.0.0.1']
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
