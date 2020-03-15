@@ -1,0 +1,31 @@
+version: '2'
+services:
+  web:
+   restart: always
+   build: ./web
+   expose:
+     - "8000"
+   links:
+     - postgres:postgres
+   command: gunicorn analytics.wsgi -b 0.0.0.0:8000
+   volumes:
+     - ./web:/usr/src/app
+     - ./web/static/:/usr/src/app/static
+  nginx:
+    restart: always
+    image: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - "./nginx/:/etc/nginx/"
+      - /www/static
+    volumes_from:
+      - web
+    links:
+      - web:web
+  postgres:
+   image: postgres
+   environment:
+     POSTGRES_HOST_AUTH_METHOD: 'trust'
+   ports:
+     - "5432:5432"
