@@ -51,7 +51,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'analytics.urls'
 
-ALLOWED_HOSTS = ['pinokio.ml', 'localhost', '127.0.0.1','ec2-3-112-254-224.ap-northeast-1.compute.amazonaws.com']
+ALLOWED_HOSTS = ['18.178.109.33','pinokio.ml', 'localhost', '127.0.0.1','ec2-3-112-254-224.ap-northeast-1.compute.amazonaws.com']
 
 TEMPLATES = [
     {
