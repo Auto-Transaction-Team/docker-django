@@ -19,4 +19,5 @@ def index(request):
             line_message.reply(reply_token)
         return HttpResponse("ok")
     else:
+        print("OK")
         return HttpResponse("NoMessage")
